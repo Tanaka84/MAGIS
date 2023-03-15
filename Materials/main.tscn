@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cj7iysi2jehto"]
+
+[ext_resource type="PackedScene" uid="uid://bf7b50x7ac1k4" path="res://Scenes/Room.tscn" id="1_1va87"]
+[ext_resource type="Texture2D" uid="uid://ns87j1uj4s1m" path="res://Materials/modern_buildings_2_2k.exr" id="2_fud6a"]
+[ext_resource type="PackedScene" uid="uid://bn01aym4lqhpd" path="res://Scenes/player.tscn" id="3_dwsx0"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_0buec"]
+panorama = ExtResource("2_fud6a")
+
+[sub_resource type="Sky" id="Sky_avlbp"]
+sky_material = SubResource("PanoramaSkyMaterial_0buec")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_staao"]
+background_mode = 2
+background_color = Color(0.27451, 0.27451, 0.27451, 1)
+background_energy_multiplier = 1.79
+sky = SubResource("Sky_avlbp")
+ambient_light_source = 3
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+fog_enabled = true
+volumetric_fog_enabled = true
+adjustment_enabled = true
+
+[node name="Main" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.721053, -0.0835959, 0.687818, 0.479665, 0.656135, 0.582588, -0.500003, 0.749999, -0.43301, 8.30725, 6.57716, 0)
+light_energy = 2.485
+light_indirect_energy = 5.687
+light_volumetric_fog_energy = 3.909
+shadow_enabled = true
+shadow_bias = 3.231
+shadow_normal_bias = 0.99
+shadow_transmittance_bias = 2.313
+shadow_blur = 1.074
+
+[node name="magisfforgodot01" parent="." instance=ExtResource("1_1va87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11369, 0, -0.392044)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="magisfforgodot01"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_staao")
+
+[node name="Player" parent="." instance=ExtResource("3_dwsx0")]
+transform = Transform3D(-0.999839, 0, 0.0179411, 0, 1, 0, -0.0179411, 0, -0.999839, -10.1854, 0.106862, -9.68432)

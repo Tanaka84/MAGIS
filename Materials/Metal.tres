@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://oc75pmlm86fn"]
+
+[ext_resource type="Texture2D" uid="uid://bia7bkweabye6" path="res://Assets/Blender/Room/magisfforgodot01_Matal_solid_paint_white_Base Color.png" id="1_rbav5"]
+[ext_resource type="Texture2D" uid="uid://dgf36grfl25pu" path="res://Assets/Blender/Room/magisfforgodot01_Matal_solid_paint_white_Metallic-Matal_solid_paint_white_Roughness.png" id="2_pp7ei"]
+[ext_resource type="Texture2D" uid="uid://dhkuagd7tl6ql" path="res://Assets/Blender/Room/magisfforgodot01_Matal_solid_paint_white_Normal.png" id="3_41u5d"]
+
+[resource]
+albedo_texture = ExtResource("1_rbav5")
+metallic = 1.0
+metallic_texture = ExtResource("2_pp7ei")
+normal_enabled = true
+normal_texture = ExtResource("3_41u5d")

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cplli8gdn10c"]
+
+[ext_resource type="Shader" path="res://Scenes/Roomglass.gdshader" id="1_xc2rq"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_xc2rq")
+shader_parameter/Color = Color(0.215686, 0.490196, 0.564706, 0.231373)
+shader_parameter/Shine = 0.2
+shader_parameter/Roughness = 0.2
